@@ -1,0 +1,19 @@
+﻿@model practicaCrud.Models.Alumno
+@{
+    ViewBag.Title = "Modificar";
+}
+
+<h2>Modificar</h2><br />
+
+@Html.BeginForm("Listar", null, FormMethod.Post)
+
+@Html.LabelFor(x => x.Nombre)
+@Html.TextBoxFor(x => x.Nombre)
+@Html.ValidationMessageFor(x => x.Nombre)
+<br />
+@Html.LabelFor(x => x.Apellido)
+@Html.TextBoxFor(x => x.Apellido)
+@Html.ValidationMessageFor(x => x.Apellido)
+<br />
+<input type="submit" />
+

@@ -1,0 +1,20 @@
+﻿@model practicaCrud.Models.Alumno
+@{
+    ViewBag.Title = "Crear";
+}
+
+<h2>Crear</h2>
+
+@Html.BeginForm("Crear", null, FormMethod.Post) <br />
+
+@Html.LabelFor(x => x.Nombre) <br />
+@Html.TextBoxFor(x => x.Nombre) <br />
+@Html.ValidationMessageFor(x => x.Nombre)
+
+@Html.LabelFor(x => x.Apellido) <br />
+@Html.TextBoxFor(x => x.Apellido) <br />
+@Html.ValidationMessageFor(x => x.Apellido)
+
+<input type="submit" value="CREAR" class="btn-success"/>
+ 
+

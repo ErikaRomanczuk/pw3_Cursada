@@ -1,0 +1,40 @@
+﻿@using practicaCrud.Models
+@model List<Alumno>
+
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Listar</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Apellido
+            </th>
+            <th>
+                Acción
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var al in @Model)
+        {
+            <tr>
+                <td>
+                    @al.Nombre
+                </td>
+                <td>
+                    @al.Apellido
+                </td>
+                <td>
+                    @Html.ActionLink("Modificar", "Modificar", new {id=al.id})
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
