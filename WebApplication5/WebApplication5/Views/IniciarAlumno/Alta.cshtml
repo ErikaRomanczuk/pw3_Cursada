@@ -1,0 +1,18 @@
+﻿@model WebApplication5.Models.AlumnoModel
+@{
+    ViewBag.Title = "Alta";
+}
+
+<form action="/IniciarAlumno/Alta" method="post">
+    <label> Ingrese su nombre completo</label> <br />
+    <input type="text" name="Nombre" size="20" /> <br />
+
+    <label> Ingrese su número de documento </label> <br />
+    <input type="text" name="Dni" size="5" /> <br />
+
+    <label> Ingrese su edad</label> <br />
+    <input type="text" name="Edad" size="5" /> <br />
+
+    <input type="submit" value="Enviar" />
+    
+</form>
