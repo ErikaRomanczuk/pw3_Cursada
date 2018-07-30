@@ -1,0 +1,19 @@
+﻿@model PracticaParcial.Models.Alumno
+@{
+    ViewBag.Title = "Modificar";
+}
+
+<h2>Modificar</h2> <br /><br />
+
+@Html.BeginForm("Modificar", null, FormMethod.Post)
+
+@Html.LabelFor(x => x.nombre)
+@Html.TextBoxFor(x => x.nombre)
+<br />
+
+@Html.LabelFor(x => x.edad)
+@Html.TextBoxFor(x => x.edad)
+<br />
+<input type="submit" value="Enviar"/>
+
+

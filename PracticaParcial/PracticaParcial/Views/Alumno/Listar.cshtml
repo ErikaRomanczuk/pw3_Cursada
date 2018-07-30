@@ -1,0 +1,47 @@
+﻿@using PracticaParcial.Models
+@model List<Alumno>
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Listar</h2>
+<br /><br />
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Edad
+            </th>
+            <th>
+                Acción
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var al in @Model)
+        {
+            <tr>
+                <td>
+                    @al.nombre
+                </td>
+                <td>
+                    @al.edad
+                </td>
+                <td>
+                    @Html.ActionLink("Modificar", "Modificar", new { id = al.id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="Crear"> <input type="button" value="Crear" /> </a>
+<hr />
+@ViewData["key"]
+<br />
+@ViewBag.key2
+@TempData["llave"]

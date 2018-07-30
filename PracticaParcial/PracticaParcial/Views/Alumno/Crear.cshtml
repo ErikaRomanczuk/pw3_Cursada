@@ -1,0 +1,16 @@
+﻿@model PracticaParcial.Models.Alumno
+@{
+    ViewBag.Title = "Crear";
+}
+
+<h2>Crear</h2>
+<hr />
+@Html.BeginForm("Crear", null, FormMethod.Post, new { enctype = "multipart/form-data" })
+{
+<input type="text" name="Nombre" placeholder="Nombre..." />
+<input type="text" name="Edad" placeholder="Edad..." />
+}
+
+<input type="submit" />
+
+<hr />
