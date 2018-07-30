@@ -1,0 +1,21 @@
+﻿@model WebApplication7.Models.Empleado
+@{
+    ViewBag.Title = "Editar";
+}
+
+<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm("Editar", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(x=> x.Id)
+
+    @Html.LabelFor(x => x.Nombre, new { @class = "control-label" })
+    @Html.TextBoxFor(x => x.Nombre, new { @class = "form-control", @required = "required" })
+    @Html.ValidationMessageFor(x => x.Nombre, "", new { @class = "text-danger" })
+
+    @Html.LabelFor(x => x.Apellido, new { @class = "control-label" })
+    @Html.TextBoxFor(x => x.Apellido, new { @class = "form-control", @required = "required" })
+    @Html.ValidationMessageFor(x => x.Apellido, "", new { @class = "text-danger" })
+
+    <input type="submit" value="Aceptar" />
+}
+

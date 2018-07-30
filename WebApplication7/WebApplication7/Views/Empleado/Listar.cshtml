@@ -1,0 +1,33 @@
+﻿@using WebApplication7.Models
+@model List<Empleado> 
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Listar</h2>
+<tr>
+    <th>
+        Nombre
+    </th>
+    <th>
+        Apellido
+    </th>
+</tr>
+
+@foreach (var em in Model)
+{
+<tr>
+    <td>
+        @em.Nombre
+    </td>
+    <td>
+        @em.Apellido
+    </td>
+    <td>
+        @Html.ActionLink("Ver", "VerDetalle", new { id = em.Id })
+    </td>
+    <td>
+        @Html.ActionLink("Editar", "Editar", new { id = em.Id })
+    </td>
+</tr>
+}
